@@ -14,8 +14,8 @@ namespace Company.Function
             {
             using (var process = new System.Diagnostics.Process())
             {
-                process.StartInfo.FileName = "/bin/bash";
-                process.StartInfo.Arguments = $"-c \"{command}\"";
+                process.StartInfo.FileName = "cmd.exe";
+                process.StartInfo.Arguments = $"/c \"{command}\"";
                 process.StartInfo.RedirectStandardOutput = true;
                 process.StartInfo.RedirectStandardError = true;
                 process.StartInfo.UseShellExecute = false;
@@ -24,18 +24,19 @@ namespace Company.Function
 
                 if (process.WaitForExit(timeout * 1000))
                 {
-                string output = process.StandardOutput.ReadToEnd();
-                string error = process.StandardError.ReadToEnd();
-                if (!string.IsNullOrEmpty(error))
-                {
-                    return $"Error: {error}";
-                }
-                return output;
+                    string output = process.StandardOutput.ReadToEnd();
+                    string error = process.StandardError.ReadToEnd();
+                    if (!string.IsNullOrEmpty(error))
+                    {
+                        return $"Error: {error}";
+                    }
+                    return output;
                 }
                 else
                 {
-                process.Kill();
-                return "Error: Command timed out.";
+                    process.Kill();
+                    string output = process.StandardOutput.ReadToEnd();
+                    return $"Error: Command timed out. Output so far: {output}";
                 }
             }
             }
