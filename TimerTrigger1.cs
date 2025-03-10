@@ -14,7 +14,7 @@ namespace Company.Function
         }
 
         [Function("TimerTrigger1")]
-        public void Run([TimerTrigger("*/10 * 14 * * *")] TimerInfo myTimer)
+        public void Run([TimerTrigger("0 */1 * * * *")] TimerInfo myTimer)
         {
             _logger.LogInformation($"C# Timer trigger function executed at: {DateTime.Now}");
             
