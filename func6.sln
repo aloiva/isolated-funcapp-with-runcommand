@@ -1,0 +1,21 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "func6", "func6.csproj", "{5808EF89-58F8-EB6D-3BA3-039FB866445E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5808EF89-58F8-EB6D-3BA3-039FB866445E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5808EF89-58F8-EB6D-3BA3-039FB866445E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5808EF89-58F8-EB6D-3BA3-039FB866445E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5808EF89-58F8-EB6D-3BA3-039FB866445E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8CD0B3E1-29E7-4285-942B-0E0751FA1372}
+	EndGlobalSection
+EndGlobal
